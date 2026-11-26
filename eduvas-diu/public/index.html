@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eduvas Affiliate Referral Campaign · DIU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div id="floaties"></div>
+<canvas id="cf"></canvas>
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-top">
+      <img src="assets/logo.png" alt="Eduvas" width="212" height="46">
+      <span class="badge">🎓 Daffodil International University</span>
+    </div>
+    <h1>Become an <span>Eduvas Affiliate Referrer</span> 🚀</h1>
+    <h3 style="font-size:17px;font-weight:600;margin:-2px 0 10px">Refer a <span class="rot" id="rot">school</span> and get rewarded</h3>
+    <p class="lead">Know a school, college, madrasa, coaching centre or training institute that still runs on paper and spreadsheets? Introduce them to Eduvas, the AI-driven education management platform, and get rewarded for every successful referral.</p>
+    <div class="how">
+      <div><i>📝</i><b>Sign up</b>Fill this 2-minute form and get your personal referral code.</div>
+      <div><i>🏫</i><b>Introduce</b>Connect Eduvas with an institution you know.</div>
+      <div><i>🎁</i><b>Get rewarded</b>Earn rewards when the referral succeeds.</div>
+    </div>
+    <div class="perks">
+      <div class="perk"><i>💰</i>Rewards for every successful referral</div>
+      <div class="perk"><i>📜</i>Certificate &amp; real B2B sales experience</div>
+      <div class="perk"><i>🤝</i>Network with EdTech professionals</div>
+    </div>
+  </section>
+
+  <div class="resume" id="resume">
+    <span>💾</span>
+    <span class="sp">You have an unfinished form from earlier. Continue where you left off?</span>
+    <button type="button" class="y" id="resumeYes">Continue</button>
+    <button type="button" class="n" id="resumeNo">Start fresh</button>
+  </div>
+
+  <section class="pass" aria-live="polite">
+    <div class="pass-top"><small>EDUVAS REFERRER PASS · DIU</small><span class="pass-lvl" id="lvl">🌱 Rookie</span></div>
+    <div class="pass-mid">
+      <div class="av" id="av">?</div>
+      <div><div class="pass-name" id="pName">Your name here</div><div class="pass-dept" id="pDept">Department · Daffodil International University</div></div>
+    </div>
+    <div class="pass-bot">
+      <div class="meter"><div class="meter-t"><span>Profile power ⚡</span><span id="pct">0%</span></div><div class="meter-b"><div id="meter"></div></div></div>
+      <div class="badges">
+        <span class="bdg" id="bg1" title="Profile complete">👤</span>
+        <span class="bdg" id="bg2" title="Networker">🏫</span>
+        <span class="bdg" id="bg3" title="Experienced">⭐</span>
+        <span class="bdg" id="bg4" title="Communicator">🎤</span>
+      </div>
+    </div>
+    <div class="pass-code" id="passCodeBox"><small>Your code will be</small><b id="passCode">EDU-••••-••••</b></div>
+  </section>
+
+  <section class="card" id="card" data-t="0">
+    <div class="card-band"></div>
+    <div class="steps" id="steps">
+      <div class="st active"><div class="dot">👤</div>About you</div>
+      <div class="st"><div class="dot">🏫</div>Your network</div>
+      <div class="st"><div class="dot">⭐</div>Experience</div>
+      <div class="st"><div class="dot">✅</div>Review</div>
+    </div>
+    <div class="bar"><div id="prog"></div><span class="rocket" id="rocket" style="left:25%">🚀</span></div>
+
+    <form id="form" novalidate autocomplete="on">
+    <div class="body">
+      <div class="coach"><div class="m">🦉</div><div class="say" id="say">Hi! Let's build your Referrer Pass. Watch it fill up as you type ⬆️</div></div>
+
+      <!-- STEP 1 -->
+      <div class="pane show" data-step="0">
+        <h2><span class="em" style="background:#E8F1FB">👤</span>Tell us about yourself</h2>
+        <p class="sub">Takes about 2 minutes. Fields marked <b style="color:var(--red)">*</b> are required.</p>
+        <div class="grid">
+          <div class="f full" data-req>
+            <label class="l" for="name">Full name <b>*</b></label>
+            <div class="inp"><span class="ic">✍️</span><input type="text" id="name" name="name" placeholder="e.g. Foysal Ahmed" autocomplete="name"></div>
+            <div class="err">Please enter your full name.</div>
+          </div>
+          <div class="f" data-req data-type="phone">
+            <label class="l" for="phone">Phone / WhatsApp <b>*</b></label>
+            <div class="inp"><span class="ic">📱</span><input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" inputmode="tel" autocomplete="tel"></div>
+            <div class="err">Enter a valid Bangladeshi mobile number (01XXXXXXXXX).</div>
+          </div>
+          <div class="f" data-req data-type="email">
+            <label class="l" for="email">Email <b>*</b></label>
+            <div class="inp"><span class="ic">✉️</span><input type="email" id="email" name="email" placeholder="you@diu.edu.bd" autocomplete="email"></div>
+            <div class="err">Please enter a valid email address.</div>
+          </div>
+          <div class="f full" data-req>
+            <label class="l" for="university">University <b>*</b></label>
+            <div class="inp"><span class="ic">🏛️</span><input type="text" id="university" name="university" value="Daffodil International University"></div>
+            <div class="err">Please enter your university.</div>
+          </div>
+          <div class="f" data-req>
+            <label class="l" for="dept">Department <b>*</b></label>
+            <div class="inp"><span class="ic">📚</span>
+              <select id="dept" name="dept">
+                <option value="">Select department</option>
+                <optgroup label="Science & IT">
+                  <option>Software Engineering (SWE)</option>
+                  <option>Computer Science & Engineering (CSE)</option>
+                  <option>Computing & Information System (CIS)</option>
+                  <option>Information Technology & Management (ITM)</option>
+                  <option>Multimedia & Creative Technology (MCT)</option>
+                  <option>Electrical & Electronic Engineering (EEE)</option>
+                  <option>Information & Communication Engineering (ICE)</option>
+                  <option>Civil Engineering</option>
+                  <option>Textile Engineering</option>
+                  <option>Architecture</option>
+                  <option>Pharmacy</option>
+                  <option>Nutrition & Food Engineering (NFE)</option>
+                  <option>Environmental Science & Disaster Management</option>
+                  <option>Public Health</option>
+                  <option>Physical Education & Sports Science</option>
+                </optgroup>
+                <optgroup label="Business & Entrepreneurship">
+                  <option>Business Administration (BBA)</option>
+                  <option>Management</option>
+                  <option>Accounting</option>
+                  <option>Finance & Banking</option>
+                  <option>Marketing</option>
+                  <option>Innovation & Entrepreneurship</option>
+                  <option>Real Estate</option>
+                  <option>Tourism & Hospitality Management</option>
+                </optgroup>
+                <optgroup label="Humanities & Social Science">
+                  <option>English</option>
+                  <option>Law</option>
+                  <option>Journalism, Media & Communication (JMC)</option>
+                  <option>Development Studies</option>
+                  <option>Economics</option>
+                </optgroup>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="err">Please choose your department.</div>
+          </div>
+          <div class="f">
+            <label class="l" for="sid">Student ID <span class="opt">(optional)</span></label>
+            <div class="inp"><span class="ic">🪪</span><input type="text" id="sid" name="sid" placeholder="e.g. 221-35-1234"></div>
+          </div>
+          <div class="f full">
+            <label class="l">Current year</label>
+            <div class="chips c-blue" data-single data-name="year">
+              <button type="button" class="chip">1st year</button><button type="button" class="chip">2nd year</button><button type="button" class="chip">3rd year</button><button type="button" class="chip">4th year</button><button type="button" class="chip">Masters</button><button type="button" class="chip">Alumni</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="pane" data-step="1">
+        <h2><span class="em" style="background:#FFF4DE">🏫</span>Your network &amp; interest</h2>
+        <p class="sub">Help us see where you can make the biggest impact.</p>
+        <div class="grid">
+          <div class="f full" data-req data-type="chips" data-for="why">
+            <label class="l">Why do you want to join? <b>*</b> <span class="opt">(pick any)</span></label>
+            <div class="chips c-sun" data-name="why">
+              <button type="button" class="chip">💰 Earn extra income</button><button type="button" class="chip">💼 Sales &amp; BD experience</button><button type="button" class="chip">📄 Boost my CV</button><button type="button" class="chip">🤝 Build my network</button><button type="button" class="chip">🧠 Learn about EdTech</button><button type="button" class="chip">🌱 Help institutions go digital</button>
+            </div>
+            <div class="err">Pick at least one reason.</div>
+          </div>
+          <div class="f full">
+            <label class="l">Which institutions can you reach? <span class="opt">(pick any)</span></label>
+            <div class="chips c-teal" data-name="inst">
+              <button type="button" class="chip">🏫 Schools</button><button type="button" class="chip">🎒 Colleges</button><button type="button" class="chip">🕌 Madrasas</button><button type="button" class="chip">🎓 Universities</button><button type="button" class="chip">📝 Coaching centres</button><button type="button" class="chip">🛠️ Training institutes</button><button type="button" class="chip">🏢 Education groups</button>
+            </div>
+          </div>
+          <div class="f full">
+            <label class="l">How many institutions could you introduce in the next 3 months?</label>
+            <div class="range"><input type="range" id="leads" min="0" max="10" value="2"><div class="rv" id="leadsV">2</div></div>
+          </div>
+          <div class="f full">
+            <label class="l">How are you connected to them?</label>
+            <div class="chips c-violet" data-name="conn">
+              <button type="button" class="chip">👨‍👩‍👧 Family</button><button type="button" class="chip">🧑‍🏫 Former teachers</button><button type="button" class="chip">🎓 Alumni of the school</button><button type="button" class="chip">👫 Friends working there</button><button type="button" class="chip">🏘️ Hometown community</button><button type="button" class="chip">💬 No contacts yet</button>
+            </div>
+          </div>
+          <div class="f">
+            <label class="l" for="district">Home district <span class="opt">(where your contacts are)</span></label>
+            <div class="inp"><span class="ic">📍</span><input type="text" id="district" name="district" placeholder="e.g. Cumilla"></div>
+          </div>
+          <div class="f">
+            <label class="l" for="heard">How did you hear about this?</label>
+            <div class="inp"><span class="ic">📣</span>
+              <select id="heard" name="heard"><option value="">Choose one</option><option>Facebook / social media</option><option>Classmate / friend</option><option>Teacher / department</option><option>Campus poster / event</option><option>WhatsApp / Messenger group</option><option>Other</option></select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="pane" data-step="2">
+        <h2><span class="em" style="background:#FDE8EE">⭐</span>Your experience</h2>
+        <p class="sub">No experience? No problem. Many great referrers are first-timers.</p>
+        <div class="grid">
+          <div class="f full" data-req data-type="yn" data-for="exp">
+            <label class="l">Have you done affiliate, referral, sales or campus-ambassador work before? <b>*</b></label>
+            <div class="yn" data-name="exp"><button type="button" data-v="Yes">👍 Yes, I have</button><button type="button" data-v="No">🙋 Not yet</button></div>
+            <div class="err">Please choose one.</div>
+            <div class="reveal" id="expBox">
+              <label class="l">What kind?</label>
+              <div class="chips c-pink" data-name="expType" style="margin-bottom:12px">
+                <button type="button" class="chip">Affiliate marketing</button><button type="button" class="chip">Campus ambassador</button><button type="button" class="chip">Field / direct sales</button><button type="button" class="chip">Telesales</button><button type="button" class="chip">Social media promotion</button><button type="button" class="chip">Event / club organising</button>
+              </div>
+              <label class="l" for="expDesc">Tell us briefly (company, role, results)</label>
+              <textarea id="expDesc" name="expDesc" placeholder="e.g. Campus ambassador for X for 6 months, brought 40 sign-ups…"></textarea>
+            </div>
+          </div>
+          <div class="f full">
+            <label class="l">Rate your communication &amp; convincing skills</label>
+            <div class="stars" id="stars"><button type="button">⭐</button><button type="button">⭐</button><button type="button">⭐</button><button type="button">⭐</button><button type="button">⭐</button></div>
+            <div class="stars-lbl" id="starsLbl">Tap a star</div>
+          </div>
+          <div class="f full">
+            <label class="l">Where are you active online?</label>
+            <div class="chips c-blue" data-name="social">
+              <button type="button" class="chip">Facebook</button><button type="button" class="chip">LinkedIn</button><button type="button" class="chip">Instagram</button><button type="button" class="chip">TikTok</button><button type="button" class="chip">YouTube</button><button type="button" class="chip">WhatsApp groups</button>
+            </div>
+          </div>
+          <div class="f full">
+            <label class="l">Time you can give per week</label>
+            <div class="chips c-teal" data-single data-name="hours">
+              <button type="button" class="chip">⏱️ 1–3 hrs</button><button type="button" class="chip">🕒 4–6 hrs</button><button type="button" class="chip">🕕 7–10 hrs</button><button type="button" class="chip">🔥 10+ hrs</button>
+            </div>
+          </div>
+          <div class="f full">
+            <label class="l">Best way to reach you</label>
+            <div class="chips c-sun" data-single data-name="contactPref">
+              <button type="button" class="chip">💬 WhatsApp</button><button type="button" class="chip">📞 Phone call</button><button type="button" class="chip">✉️ Email</button><button type="button" class="chip">📘 Messenger</button>
+            </div>
+          </div>
+          <div class="f full">
+            <label class="l" for="note">Anything else? <span class="opt">(ideas, questions, a lead you already have in mind)</span></label>
+            <textarea id="note" name="note" placeholder="e.g. My uncle is principal of a college in Feni and they're looking for software…"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="pane" data-step="3">
+        <h2><span class="em" style="background:var(--teal-l)">✅</span>Review &amp; submit</h2>
+        <p class="sub">Check your details. Tap <b>Back</b> to change anything.</p>
+        <div class="rev" id="review"></div>
+        <label class="consent"><input type="checkbox" id="agree"> <span>I agree that the Eduvas team may contact me about the affiliate referral program and keep my details for this campaign.</span></label>
+        <div class="f" id="agreeF"><div class="err">Please tick the box to continue.</div></div>
+      </div>
+
+    </div>
+    <div class="sending" id="sending"><span class="spin"></span>Saving your registration…</div>
+    <div class="warnbox" id="warn"></div>
+    <div class="nav">
+      <button type="button" class="btn ghost" id="back" style="visibility:hidden">← Back</button>
+      <span class="count" id="count">Step 1 of 4</span>
+      <button type="button" class="btn go" id="next">Next →</button>
+    </div>
+    </form>
+
+    <div class="done" id="done">
+      <div class="big">🎉</div>
+      <h2>You're in, <span id="dName"></span>!</h2>
+      <p>Thanks for joining the Eduvas Affiliate Referral Campaign. Our team will contact you soon with your starter kit and next steps.</p>
+      <div class="code"><span>Your referral code</span><b id="dCode">—</b><button type="button" id="copy">Copy</button></div>
+      <p style="font-size:13px">Share this code when you introduce an institution, so the referral is credited to you.</p>
+      <div class="share">
+        <button type="button" class="wa" id="shWa">💬 Share on WhatsApp</button>
+        <button type="button" class="fb" id="shFb">📘 Share on Facebook</button>
+        <button type="button" class="cp" id="shCp">📋 Copy message</button>
+      </div>
+      <div class="demo" id="demo">Preview mode: nothing was saved. Paste your Apps Script /exec URL into the ENDPOINT line at the top of this file and entries will go straight to your Google Sheet.</div>
+      <div style="margin-top:22px"><button class="btn ghost" type="button" onclick="location.reload()">Submit another response</button></div>
+    </div>
+  </section>
+
+  <div class="foot">Eduvas · AI-driven education management · Campaign for Daffodil International University students</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

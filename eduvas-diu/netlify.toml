@@ -1,0 +1,22 @@
+# Netlify configuration for the Eduvas Affiliate Referral site.
+# No build step: the site is plain HTML/CSS/JS served from public/.
+
+[build]
+  publish = "public"
+
+[[headers]]
+  for = "/assets/logo.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# config.js and app.js must never be cached hard, or a changed
+# endpoint would not reach visitors who already loaded the site.
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
