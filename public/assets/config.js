@@ -8,4 +8,4 @@
    the form works, but nothing is written to the Google Sheet.
    ============================================================ */
 
-window.EDUVAS_ENDPOINT = "";
+window.EDUVAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbyaHAk7ur7y03m4YT2pKd-Yz2SYjDljbyIrdzswwcTQd5RNC_3oKPl8MAIkvvKALd50/exec";
